@@ -55,7 +55,13 @@ STORE LISTING CLASSIFICATION & SETUP:
 - Contact Email: dineshkumartlbupi@gmail.com
 
 ================================================================================
-4. RELEASE NOTES / WHAT'S NEW IN THIS VERSION (v1.0.0 - Build 1)
+5. PHOTO AND VIDEO PERMISSIONS DECLARATION (READ_MEDIA_IMAGES)
+================================================================================
+Paste into Google Play Console (Under 500 characters):
+
+AI Outfit is a virtual try-on application where the core feature requires users to select full-body and portrait photos from their device to test outfits. The app performs local high-resolution image analysis, aspect ratio validation, body contour cropping, and offline caching before submitting to the try-on pipeline. Broad access ensures seamless multiple-garment testing and instant previews across user photo albums without interrupting the interactive styling workflow.
+================================================================================
+6. RELEASE NOTES / WHAT'S NEW IN THIS VERSION (v1.0.0 - Build 1)
 ================================================================================
 Copy-paste directly into Google Play Console "Release notes" box:
 
