@@ -1,0 +1,55 @@
+================================================================================
+GOOGLE PLAY STORE LISTING DETAILS - AI OUTFIT: TRY ON CLOTHES
+================================================================================
+
+1. APP TITLE (26 / 30 characters)
+AI Outfit: Try On Clothes
+
+2. SHORT DESCRIPTION (75 / 80 characters)
+Transform your style in seconds! Photorealistic AI virtual try-on & outfits.
+
+3. FULL DESCRIPTION (ASO Optimized)
+Transform your style in seconds with AI Outfit: Try On Clothes — the ultimate photorealistic AI-powered virtual dressing room and fashion styler!
+
+Whether you want to try on an elegant evening gown, a tailored tuxedo, trendy casual streetwear, or traditional Indian ethnic wear, AI Outfit lets you visualize any clothing on your real body with unmatched fabric realism, natural draping, and perfect ambient lighting.
+
+🌟 KEY FEATURES:
+
+⚡ CHANGE OUTFITS IN SECONDS
+No more guessing how clothes look on you! Simply snap a photo or choose a model, pick any outfit from our trending catalog, and watch our neural virtual try-on engine fit the clothing naturally to your body contours.
+
+👗 DISCOVER 3,000+ TRENDING TEMPLATES
+Explore an ever-growing luxury wardrobe catalog:
+• Cozy Dresses & Summer Sundresses
+• Formal Work Shirts & Tailored Blazers
+• Party Wear & Red Carpet Evening Gowns
+• Royal Indian Ethnic Wear (Sarees, Anarkalis & Sherwanis)
+• Men’s Fashion, Leather Jackets & Casual Streetwear
+
+🎯 SMART BODY FRAMING & FOCUS AREAS
+Select target styling zones for pinpoint accuracy:
+• Upper Body: Shirts, tops, blazers, hoodies & jackets
+• Lower Body: Jeans, trousers, skirts & shorts
+• Full Body: Complete outfits, jumpsuits, dresses & ethnic sets
+
+🔄 INTERACTIVE BEFORE & AFTER SLIDER
+Experience the transformation with our ultra-smooth 60fps draggable split comparison slider. Slide left and right to inspect realistic fabric folds, stitch embroidery, and natural shadows.
+
+💾 SAVE & SHARE HD LOOKS
+Save your favorite style transformations directly to your gallery in crystal-clear HD. Share your stunning new looks with friends on Instagram, WhatsApp, Facebook, and TikTok with one tap!
+
+🔒 PRIVACY FIRST & SECURE
+Your photos are processed securely and never shared with third parties. Your personal wardrobe creations remain 100% confidential.
+
+Step into the future of fashion. Download AI Outfit: Try On Clothes today and find your perfect look effortlessly!
+
+--------------------------------------------------------------------------------
+STORE LISTING CLASSIFICATION & SETUP:
+--------------------------------------------------------------------------------
+- Category: Lifestyle (Secondary: Beauty)
+- Tags: Fashion, Virtual Try-On, Clothing, Photo Editor, Shopping
+- Content Rating: Everyone (PEGI 3 / ESRB Everyone)
+- Target Audience: 18+ and above
+- Privacy Policy URL: https://ai-outfit-backend-9u92.onrender.com/api
+- Contact Email: karyaloged@gmail.com
+================================================================================
