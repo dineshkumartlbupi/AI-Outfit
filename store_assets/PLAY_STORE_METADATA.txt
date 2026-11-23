@@ -51,5 +51,5 @@ STORE LISTING CLASSIFICATION & SETUP:
 - Content Rating: Everyone (PEGI 3 / ESRB Everyone)
 - Target Audience: 18+ and above
 - Privacy Policy URL: https://ai-outfit-backend-9u92.onrender.com/api
-- Contact Email: karyaloged@gmail.com
+- Contact Email: dineshkumartlbupi@gmail.com
 ================================================================================
