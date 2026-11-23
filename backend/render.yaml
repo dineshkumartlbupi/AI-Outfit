@@ -1,10 +1,10 @@
 services:
   - type: web
     name: ai-outfit-backend
-    runtime: node
+    runtime: docker
+    dockerfilePath: Dockerfile
+    dockerContext: .
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -14,5 +14,5 @@ services:
         sync: false
       - key: FAL_KEY
         sync: false
-      - key: FASHN_API_KEY
+      - key: PUBLIC_BACKEND_URL
         sync: false

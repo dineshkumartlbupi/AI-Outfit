@@ -5,8 +5,8 @@ class AppConstants {
   static const String appName = 'AI Outfit';
   static const String appTagline = 'Transform Your Style In Seconds';
 
-  // If you deploy your backend to Render, Railway, or VPS, set it here (e.g. https://your-app.onrender.com/api)
-  static String customBackendUrl = '';
+  // Live cloud backend URL
+  static String customBackendUrl = 'https://degree-promised-every-castle.trycloudflare.com/api';
 
   static String get apiBaseUrl {
     if (customBackendUrl.isNotEmpty) {
