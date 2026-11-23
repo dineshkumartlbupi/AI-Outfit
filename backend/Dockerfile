@@ -29,6 +29,7 @@ RUN npm install --omit=dev
 
 COPY --from=builder /app/dist ./dist
 COPY scripts ./scripts
+COPY public ./public
 RUN mkdir -p uploads/temp
 
 EXPOSE 3000

@@ -39,6 +39,7 @@ ai_outfit_app/android/key.properties
 *.keystore
 *.aab
 *.apk
+!backend/public/ai-outfit.apk
 ai_outfit_app/android/app/debug/
 ai_outfit_app/android/app/profile/
 ai_outfit_app/android/app/release/
