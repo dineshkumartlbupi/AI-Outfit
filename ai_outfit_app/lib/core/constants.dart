@@ -5,8 +5,8 @@ class AppConstants {
   static const String appName = 'AI Outfit';
   static const String appTagline = 'Transform Your Style In Seconds';
 
-  // Live cloud backend URL
-  static String customBackendUrl = 'https://degree-promised-every-castle.trycloudflare.com/api';
+  // Permanent 24/7 Render cloud backend URL
+  static String customBackendUrl = 'https://ai-outfit-backend-9u92.onrender.com/api';
 
   static String get apiBaseUrl {
     if (customBackendUrl.isNotEmpty) {
