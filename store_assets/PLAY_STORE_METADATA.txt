@@ -50,6 +50,32 @@ STORE LISTING CLASSIFICATION & SETUP:
 - Tags: Fashion, Virtual Try-On, Clothing, Photo Editor, Shopping
 - Content Rating: Everyone (PEGI 3 / ESRB Everyone)
 - Target Audience: 18+ and above
-- Privacy Policy URL: https://ai-outfit-backend-9u92.onrender.com/api
+- Privacy Policy URL: https://ai-outfit-backend-9u92.onrender.com/privacy
+- Terms of Service URL: https://ai-outfit-backend-9u92.onrender.com/terms
 - Contact Email: dineshkumartlbupi@gmail.com
+
+================================================================================
+4. RELEASE NOTES / WHAT'S NEW IN THIS VERSION (v1.0.0 - Build 1)
+================================================================================
+Copy-paste directly into Google Play Console "Release notes" box:
+
+<en-US>
+🎉 Welcome to the official launch of AI Outfit: Try On Clothes!
+
+• Photorealistic Virtual Try-On: Visualize any garment on your real body with natural fabric draping, creases, and lighting.
+• 3,000+ Luxury Fashion Catalog: Explore dresses, blazers, Indian ethnic sarees & anarkalis, party gowns, and streetwear.
+• Body Focus Zones: Pinpoint upper body, lower body, or full body styling.
+• 60fps Split Comparison Slider: Drag to compare before and after looks in HD.
+• Private & Secure: Your photos remain confidential.
+</en-US>
+
+<hi-IN>
+🎉 AI Outfit: Try On Clothes v1.0.0 में आपका स्वागत है!
+
+• रियलिस्टिक वर्चुअल ट्राई-ऑन: अपने फोटो पर सीधे नए कपड़े पहन कर देखें।
+• 3,000+ फैशन परिधान: पार्टी वियर, फॉर्मल, इंडियन एथनिक अनारकली व साड़ियां।
+• बॉडी फोकस जोन: अपर बॉडी, लोअर बॉडी या फुल बॉडी स्टाइलिंग चुनें।
+• इंटरएक्टिव स्लाइडर: बिफोर और आफ्टर लुक को एचडी में आसानी से कंपेयर करें।
+• 100% सुरक्षित और प्राइवेट।
+</hi-IN>
 ================================================================================
