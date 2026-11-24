@@ -426,48 +426,170 @@
     }
 
     /* Screenshots Gallery */
+    /* Screenshots Section */
     .screenshots-section {
-      padding: 20px 0 100px;
+      padding: 40px 0 100px;
+    }
+
+    .screenshots-header-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn-zip-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #ff1a75 0%, #d81b60 50%, #8e24aa 100%);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(255, 26, 117, 0.4);
+      transition: all 0.2s;
+    }
+
+    .btn-zip-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 26, 117, 0.6);
+    }
+
+    .btn-gallery-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-gallery-link:hover {
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .screenshots-scroll {
       display: flex;
-      gap: 24px;
+      gap: 28px;
       overflow-x: auto;
-      padding: 20px 0 40px;
+      padding: 20px 10px 40px;
       scroll-snap-type: x mandatory;
       scrollbar-width: thin;
       scrollbar-color: var(--primary) transparent;
     }
 
     .shot-card {
-      flex: 0 0 280px;
-      scroll-snap-align: center;
+      flex: 0 0 310px;
+      scroll-snap-align: start;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
     .shot-card:hover {
-      transform: scale(1.03);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(255, 26, 117, 0.25);
+      border-color: rgba(255, 26, 117, 0.5);
     }
 
-    .shot-card img {
+    .shot-img-wrap {
+      position: relative;
+      background: #000;
+      aspect-ratio: 9 / 20;
+      overflow: hidden;
+    }
+
+    .shot-img-wrap img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
-    .shot-label {
-      padding: 16px;
-      text-align: center;
-      font-weight: 700;
-      font-size: 14px;
+    .shot-meta {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(26, 16, 40, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex: 1;
+    }
+
+    .shot-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
       color: #fff;
-      border-top: 1px solid var(--card-border);
+      line-height: 1.3;
+    }
+
+    .shot-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .shot-card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 6px;
+    }
+
+    .btn-shot-dl {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--primary-gradient);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .btn-shot-dl:hover {
+      box-shadow: 0 4px 14px rgba(255, 26, 117, 0.4);
+    }
+
+    .btn-shot-view {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+
+    .btn-shot-view:hover {
+      background: rgba(255, 255, 255, 0.15);
     }
 
     /* Download Box */
@@ -567,6 +689,7 @@
       <div class="nav-links">
         <a href="#demo" class="nav-link">Live Preview</a>
         <a href="#features" class="nav-link">Features</a>
+        <a href="/screenshots" class="nav-link">Screenshots</a>
         <a href="#download" class="nav-link">Download</a>
         <a href="/privacy" class="nav-link">Privacy Policy</a>
         <a href="/terms" class="nav-link">Terms</a>
@@ -655,25 +778,130 @@
   </section>
 
   <!-- App Screenshots Gallery -->
-  <section class="container screenshots-section">
+  <section class="container screenshots-section" id="screenshots">
     <div class="section-title-wrap">
-      <span class="section-tag">App Preview</span>
-      <h2 class="section-title">Built For Seamless Mobile Experience</h2>
-      <p class="section-sub">Designed with dark luxury aesthetics, vibrant gradients, and ultra-smooth animations.</p>
+      <span class="section-tag">Play Store Assets</span>
+      <h2 class="section-title">Official Google Play Store Showcase</h2>
+      <p class="section-sub">Production-ready promotional banners (1080 × 2400 px, 9:20 aspect ratio) designed to convert visitors into active users.</p>
+    </div>
+
+    <div class="screenshots-header-actions">
+      <a href="/download-screenshots" class="btn-zip-download">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+        Download All Screenshots (ZIP • 6.9 MB)
+      </a>
+      <a href="/screenshots" class="btn-gallery-link">
+        Open Full Showcase Gallery →
+      </a>
     </div>
 
     <div class="screenshots-scroll">
+      <!-- Shot 1 -->
       <div class="shot-card">
-        <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795491817/ai_outfit/landing/home.png" alt="Home Dashboard">
-        <div class="shot-label">1. Home Dashboard</div>
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498110/ai_outfit/playstore_screenshots/01_change_outfits.png" alt="Change Outfits in Seconds" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">1. CHANGE OUTFITS IN SECONDS</div>
+          <div class="shot-sub">1-Tap Dressing • Ultra HD Realism • 100+ Styles</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_01_change_outfits/v1795498110/ai_outfit/playstore_screenshots/01_change_outfits.png" download="play_store_01_change_outfits.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498110/ai_outfit/playstore_screenshots/01_change_outfits.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Shot 2 -->
       <div class="shot-card">
-        <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795491815/ai_outfit/landing/catalog.png" alt="Trending Catalog">
-        <div class="shot-label">2. Trending Catalog</div>
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498111/ai_outfit/playstore_screenshots/02_trending_templates.png" alt="Discover Trending Templates" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">2. DISCOVER TRENDING TEMPLATES</div>
+          <div class="shot-sub">Curated Collections • Seasonal Trends • Smart Filters</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_02_trending_templates/v1795498111/ai_outfit/playstore_screenshots/02_trending_templates.png" download="play_store_02_trending_templates.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498111/ai_outfit/playstore_screenshots/02_trending_templates.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Shot 3 -->
       <div class="shot-card">
-        <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795491819/ai_outfit/landing/slider.png" alt="Split Slider Transformation">
-        <div class="shot-label">3. Style Transformation</div>
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498112/ai_outfit/playstore_screenshots/03_style_transformation.png" alt="See Transformation" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">3. STYLE TRANSFORMATION</div>
+          <div class="shot-sub">Interactive Slider • Texture Precision • Body Match</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_03_style_transformation/v1795498112/ai_outfit/playstore_screenshots/03_style_transformation.png" download="play_store_03_style_transformation.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498112/ai_outfit/playstore_screenshots/03_style_transformation.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shot 4 -->
+      <div class="shot-card">
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498114/ai_outfit/playstore_screenshots/04_real_look.png" alt="Start With Real Look" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">4. START WITH YOUR REAL LOOK</div>
+          <div class="shot-sub">Camera or Gallery • Diverse Models • Instant Crop</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_04_real_look/v1795498114/ai_outfit/playstore_screenshots/04_real_look.png" download="play_store_04_real_look.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498114/ai_outfit/playstore_screenshots/04_real_look.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shot 5 -->
+      <div class="shot-card">
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498115/ai_outfit/playstore_screenshots/05_focus_area.png" alt="Choose Focus Area" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">5. CHOOSE YOUR FOCUS AREA</div>
+          <div class="shot-sub">Upper Body • Lower Body • Full Body Tailoring</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_05_focus_area/v1795498115/ai_outfit/playstore_screenshots/05_focus_area.png" download="play_store_05_focus_area.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498115/ai_outfit/playstore_screenshots/05_focus_area.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shot 6 -->
+      <div class="shot-card">
+        <div class="shot-img-wrap">
+          <img src="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498117/ai_outfit/playstore_screenshots/06_save_share.png" alt="Save and Share" loading="lazy">
+        </div>
+        <div class="shot-meta">
+          <div class="shot-title">6. SAVE & SHARE YOUR HD LOOKS</div>
+          <div class="shot-sub">High-Res Export • 1-Tap Social Share • Zero Watermarks</div>
+          <div class="shot-card-actions">
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/fl_attachment:play_store_06_save_share/v1795498117/ai_outfit/playstore_screenshots/06_save_share.png" download="play_store_06_save_share.png" class="btn-shot-dl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+              Download HD
+            </a>
+            <a href="https://res.cloudinary.com/fnssc6ie/image/upload/v1795498117/ai_outfit/playstore_screenshots/06_save_share.png" target="_blank" class="btn-shot-view" title="Open Fullscreen">↗</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -711,6 +939,8 @@
         <ul>
           <li><a href="#demo">Live Demo</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="/screenshots">Play Store Showcase</a></li>
+          <li><a href="/download-screenshots">Download Assets (ZIP)</a></li>
           <li><a href="/download">Download APK</a></li>
           <li><a href="/api/templates">API Documentation</a></li>
         </ul>

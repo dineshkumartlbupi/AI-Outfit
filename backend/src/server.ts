@@ -44,6 +44,15 @@ app.get('/download', (_req, res) => {
   res.download(apkPath, 'AI-Outfit.apk');
 });
 
+app.get('/screenshots', (_req, res) => {
+  res.sendFile(path.join(__dirname, '../public/screenshots.html'));
+});
+
+app.get('/download-screenshots', (_req, res) => {
+  const zipPath = path.join(__dirname, '../public/play-store-screenshots.zip');
+  res.download(zipPath, 'AI-Outfit-Play-Store-Screenshots-1080x2400.zip');
+});
+
 // Health check endpoint
 app.get('/api/health', (_req, res) => {
   res.json({

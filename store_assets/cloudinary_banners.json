@@ -1,0 +1,50 @@
+[
+  {
+    "file": "01_change_outfits.png",
+    "public_id": "ai_outfit/playstore_screenshots/01_change_outfits",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498110/ai_outfit/playstore_screenshots/01_change_outfits.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 960527
+  },
+  {
+    "file": "02_trending_templates.png",
+    "public_id": "ai_outfit/playstore_screenshots/02_trending_templates",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498111/ai_outfit/playstore_screenshots/02_trending_templates.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 1422041
+  },
+  {
+    "file": "03_style_transformation.png",
+    "public_id": "ai_outfit/playstore_screenshots/03_style_transformation",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498112/ai_outfit/playstore_screenshots/03_style_transformation.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 1575716
+  },
+  {
+    "file": "04_real_look.png",
+    "public_id": "ai_outfit/playstore_screenshots/04_real_look",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498114/ai_outfit/playstore_screenshots/04_real_look.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 1015755
+  },
+  {
+    "file": "05_focus_area.png",
+    "public_id": "ai_outfit/playstore_screenshots/05_focus_area",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498115/ai_outfit/playstore_screenshots/05_focus_area.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 964601
+  },
+  {
+    "file": "06_save_share.png",
+    "public_id": "ai_outfit/playstore_screenshots/06_save_share",
+    "secure_url": "https://res.cloudinary.com/fnssc6ie/image/upload/v1795498117/ai_outfit/playstore_screenshots/06_save_share.png",
+    "width": 1080,
+    "height": 2400,
+    "bytes": 1314657
+  }
+]
