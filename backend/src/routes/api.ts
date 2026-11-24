@@ -8,6 +8,7 @@ import {
   BACKGROUND_OPTIONS,
 } from '../data/templates';
 import { vtonService } from '../services/vton.service';
+import { cloudinaryService } from '../services/cloudinary.service';
 import { FocusArea, TryOnMode, WardrobeItem } from '../types';
 import multer from 'multer';
 import path from 'path';
@@ -125,14 +126,24 @@ router.get('/backgrounds', (_req: Request, res: Response) => {
 /**
  * 6. Direct Photo Upload (User photo or custom garment)
  */
-router.post('/upload', upload.single('photo'), (req: Request, res: Response) => {
+router.post('/upload', upload.single('photo'), async (req: Request, res: Response) => {
   if (!req.file) {
     return res.status(400).json({ success: false, message: 'No image uploaded' });
   }
 
   const host = req.get('host');
   const protocol = req.protocol;
-  const imageUrl = `${protocol}://${host}/uploads/${req.file.filename}`;
+  let imageUrl = `${protocol}://${host}/uploads/${req.file.filename}`;
+
+  // Upload to Cloudinary CDN for persistent storage and fast worldwide delivery
+  try {
+    const cdnUrl = await cloudinaryService.uploadLocalFile(req.file.path, 'user_uploads');
+    if (cdnUrl) {
+      imageUrl = cdnUrl;
+    }
+  } catch (err: any) {
+    console.warn('[Cloudinary Upload Warning] Fallback to local URL:', err?.message || err);
+  }
 
   res.json({
     success: true,

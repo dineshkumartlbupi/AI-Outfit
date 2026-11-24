@@ -1,5 +1,6 @@
 import { FocusArea, TryOnJob, TryOnMode } from '../types';
 import { GARMENT_TEMPLATES, HAIRSTYLES, BEARD_STYLES, BACKGROUND_OPTIONS } from '../data/templates';
+import { cloudinaryService } from './cloudinary.service';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import sharp from 'sharp';
@@ -160,7 +161,14 @@ class VTONService {
             .toFile(enhancedPath);
 
           const hostUrl = process.env.PUBLIC_BACKEND_URL || 'http://192.168.1.12:3000';
-          job.resultImageUrl = `${hostUrl}/uploads/${enhancedFileName}`;
+          let finalUrl = `${hostUrl}/uploads/${enhancedFileName}`;
+          try {
+            const cdnUrl = await cloudinaryService.uploadLocalFile(enhancedPath, 'hd_results', `hd_${path.basename(enhancedFileName, '.jpg')}`);
+            if (cdnUrl) finalUrl = cdnUrl;
+          } catch (cErr: any) {
+            console.warn('[Cloudinary Warning] HD upload failed:', cErr?.message);
+          }
+          job.resultImageUrl = finalUrl;
         }
       }
     } catch (e: any) {
@@ -276,7 +284,21 @@ class VTONService {
           }
           if (fs.existsSync(resultFilePath)) {
             const hostUrl = process.env.PUBLIC_BACKEND_URL || 'http://192.168.1.12:3000';
-            job.resultImageUrl = `${hostUrl}/uploads/${resultFileName}`;
+            let finalUrl = `${hostUrl}/uploads/${resultFileName}`;
+
+            cloudinaryService
+              .uploadLocalFile(resultFilePath, 'tryon_results', `tryon_${job.id}`)
+              .then((cdnUrl) => {
+                if (cdnUrl) {
+                  job.resultImageUrl = cdnUrl;
+                  console.log(`[Cloudinary] Job ${job.id} result CDN: ${cdnUrl}`);
+                }
+              })
+              .catch((cErr) => {
+                console.warn('[Cloudinary Warning] Result upload failed:', cErr?.message);
+              });
+
+            job.resultImageUrl = finalUrl;
             job.status = 'COMPLETED';
             job.progress = 100;
             job.message = 'AI Virtual Try-On completed with neural realism!';
@@ -564,9 +586,16 @@ class VTONService {
           .toFile(resultFilePath);
       }
 
-      // Return reachable URL
+      // Return reachable URL (Upload to Cloudinary CDN for persistent delivery)
       const hostUrl = process.env.PUBLIC_BACKEND_URL || 'http://192.168.1.12:3000';
-      job.resultImageUrl = `${hostUrl}/uploads/${resultFileName}`;
+      let finalUrl = `${hostUrl}/uploads/${resultFileName}`;
+      try {
+        const cdnUrl = await cloudinaryService.uploadLocalFile(resultFilePath, 'tryon_results', `tryon_${job.id}`);
+        if (cdnUrl) finalUrl = cdnUrl;
+      } catch (cErr: any) {
+        console.warn('[Cloudinary Warning] Smart composite CDN upload failed:', cErr?.message);
+      }
+      job.resultImageUrl = finalUrl;
 
       job.status = 'COMPLETED';
       job.progress = 100;
