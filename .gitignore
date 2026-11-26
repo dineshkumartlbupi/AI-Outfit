@@ -18,6 +18,7 @@ backend/yarn-debug.log*
 backend/yarn-error.log*
 backend/uploads/*
 !backend/uploads/.gitkeep
+!backend/uploads/temp/
 backend/uploads/temp/*
 !backend/uploads/temp/.gitkeep
 
@@ -34,9 +35,6 @@ ai_outfit_app/ios/Flutter/Flutter.podspec
 ai_outfit_app/ios/Pods/
 ai_outfit_app/android/.gradle/
 ai_outfit_app/android/local.properties
-ai_outfit_app/android/key.properties
-*.jks
-*.keystore
 *.aab
 *.apk
 !backend/public/ai-outfit.apk

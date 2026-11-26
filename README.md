@@ -132,17 +132,19 @@ FASHN_API_KEY=your_fashn_api_key_here
 
 ### 2. Run the Flutter Mobile App
 
+The repository includes the release keystore, `key.properties`, and Gradle wrappers so `flutter run` and `flutter build appbundle --release` work immediately with zero manual setup.
+
 ```bash
 cd ai_outfit_app
 
-# To run on connected physical Android device:
-flutter run -d 10BG8D1HN3001YJ
+# Run on connected Android device / emulator:
+flutter run
 
-# Or run on macOS Desktop:
-flutter run -d macos
+# Or build the Google Play release bundle (targetSdk 36, versionCode 2):
+flutter build appbundle --release
 
-# Or run in Google Chrome:
-flutter run -d chrome
+# Or build the standalone release APK:
+flutter build apk --release
 ```
 
 *(For Android devices, enable reverse port forwarding so the device can access the local server:)*

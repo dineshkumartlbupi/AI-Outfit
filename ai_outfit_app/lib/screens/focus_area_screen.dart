@@ -14,6 +14,17 @@ class FocusAreaScreen extends StatelessWidget {
     final provider = context.watch<TryOnProvider>();
     final selectedGarment = provider.selectedGarment;
 
+    String actionTitle = 'Generate Virtual Try-On';
+    if (provider.activeMode == 'hair_style' && provider.selectedHairstyle != null) {
+      actionTitle = 'Try On ${provider.selectedHairstyle!.name}';
+    } else if (provider.activeMode == 'beard_style' && provider.selectedBeard != null) {
+      actionTitle = 'Try On ${provider.selectedBeard!.name}';
+    } else if (provider.activeMode == 'custom_garment') {
+      actionTitle = 'Try On Custom Garment';
+    } else if (selectedGarment != null) {
+      actionTitle = 'Try On ${selectedGarment.name}';
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Choose Focus Area'),
@@ -158,9 +169,7 @@ class FocusAreaScreen extends StatelessWidget {
                   const SizedBox(width: 10),
                   Flexible(
                     child: Text(
-                      selectedGarment != null
-                          ? 'Try On ${selectedGarment.name}'
-                          : 'Generate Virtual Try-On',
+                      actionTitle,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       style: const TextStyle(
